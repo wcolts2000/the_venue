@@ -49,7 +49,7 @@ export default class Header extends Component {
           <IconButton>
             <MenuIcon
               aria-label="menu"
-              color="inherit"
+              style={{ color: "white" }}
               onClick={value => this.toggleDrawer(value)}
             />
           </IconButton>
