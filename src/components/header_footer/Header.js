@@ -25,9 +25,9 @@ export default class Header extends Component {
     }
   };
 
-  toggleDrawer = value => {
+  toggleDrawer = () => {
     this.setState({
-      drawerOpen: value
+      drawerOpen: !this.state.drawerOpen
     });
   };
 
@@ -50,12 +50,12 @@ export default class Header extends Component {
             <MenuIcon
               aria-label="menu"
               style={{ color: "white" }}
-              onClick={value => this.toggleDrawer(value)}
+              onClick={() => this.toggleDrawer()}
             />
           </IconButton>
           <SideDrawer
             open={this.state.drawerOpen}
-            onClose={value => this.toggleDrawer(value)}
+            onClose={() => this.toggleDrawer()}
           />
         </Toolbar>
       </AppBar>
