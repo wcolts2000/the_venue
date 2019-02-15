@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyButton from '../utils/MyButton';
+import Zoom from 'react-reveal/Zoom';
 
 
 export default class Pricing extends Component {
@@ -7,12 +8,14 @@ export default class Pricing extends Component {
     prices: [100,150,250],
     positions: ["Balcony", "Medium", "Star"],
     desc: ['Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur culpa consequatur totam', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem, optio.', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, ab!'],
-    linkto: ['http://sales/b', 'http://sales/m', 'http://sales/s' ]
+    linkto: ['http://sales/b', 'http://sales/m', 'http://sales/s' ],
+    delay: [500, 0, 500]
   }
 
   showBoxes = () => (
-     this.state.prices.map((box, i) => (
-        <div key={i} className="pricing_item">
+    this.state.prices.map((_, i) => (
+      <Zoom key={i} delay={this.state.delay[i]}>
+        <div  className="pricing_item">
           <div className="pricing_inner_wrapper">
             <div className="pricing_title"><span>${this.state.prices[i]}</span><span>{this.state.positions[i]}</span></div>
             <div className="pricing_description">{this.state.desc[i]}</div>
@@ -21,6 +24,7 @@ export default class Pricing extends Component {
             </div>
           </div>
         </div>
+      </Zoom>
       ))
   )
 
