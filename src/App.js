@@ -15,19 +15,19 @@ class App extends Component {
       <div className="App">
         <Header />
         <Element name="featured">
-          <Featured scrollto="featured" />
+          <Featured />
         </Element>
         <Element name="venueinfo">
-          <VenueInfo scrollto="venueinfo" />
+          <VenueInfo />
         </Element>
         <Element name="highlights">
-          <Highlights scrollto="highlight" />
+          <Highlights />
         </Element>
         <Element name="pricing">
-          <Pricing scrollto="pricing" />
+          <Pricing />
         </Element>
         <Element name="location">
-          <Location scrollto="location" />
+          <Location />
         </Element>
         <Footer />
       </div>
