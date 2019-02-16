@@ -10,6 +10,7 @@ function Location() {
         frameBorder="0"
         style={{ border: 0 }}
         allowFullScreen
+        title="map"
       />
       <div className="location_tag">
         <div>Location</div>
