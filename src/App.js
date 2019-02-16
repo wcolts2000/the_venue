@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Featured from "./components/featured/index";
+import Footer from "./components/header_footer/Footer";
 import Header from "./components/header_footer/Header";
 import Highlights from "./components/highlights/index";
 import Location from "./components/location";
@@ -17,6 +18,7 @@ class App extends Component {
         <Highlights />
         <Pricing />
         <Location />
+        <Footer />
       </div>
     );
   }
